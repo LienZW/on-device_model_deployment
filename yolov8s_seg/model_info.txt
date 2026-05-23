@@ -1,0 +1,13 @@
+Selected model: runs_202508026/segment/train2_s/weights/best.pt
+Task: YOLOv8 segmentation, rutting class
+Classes: {0: task}
+Input: images [1, 3, 640, 640], RGB, scale 1/255
+ONNX: yolov8s_seg.onnx, opset 12, IR version 7
+Outputs:
+  output0 [1, 37, 8400]      # 4 box values + 1 class score + 32 mask coefficients
+  output1 [1, 32, 160, 160]  # mask prototypes
+
+Notes:
+  train1_n has an abnormal extra class named "\" and outputs [1, 38, 8400].
+  Use train2_s first to get the deployment pipeline working; try train3_m later if the board has enough latency budget.
+

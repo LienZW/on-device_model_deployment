@@ -1,0 +1,24 @@
+# 不上传YOLO运行结果
+runs_202508026/
+runs_*/
+runs*/
+
+# 不上传模型文件
+*.pt
+*.onnx
+*.engine
+*.bin
+*.nbg
+*.weights
+*.data
+
+# Python缓存
+__pycache__/
+*.pyc
+
+# 日志
+*.log
+
+# 编辑器文件
+.vscode/
+.DS_Store
